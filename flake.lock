@@ -1,0 +1,82 @@
+{
+  "nodes": {
+    "filament-archive": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-zz6JY2U66o3esnDHYpInUGcGzT4PDt8rAsN/6j7Tels=",
+        "type": "tarball",
+        "url": "https://github.com/google/filament/releases/download/v1.31.6/filament-v1.31.6-linux.tgz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://github.com/google/filament/releases/download/v1.31.6/filament-v1.31.6-linux.tgz"
+      }
+    },
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1676283394,
+        "narHash": "sha256-XX2f9c3iySLCw54rJ/CZs+ZK6IQy7GXNY4nSOyu2QG4=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "3db36a8b464d0c4532ba1c7dda728f4576d6d073",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1669833724,
+        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "22.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "open3d-archive": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-y41RToomgzuqIRno7kpj1BAoD//0gGThUCPkCCJa4LQ=",
+        "type": "tarball",
+        "url": "https://github.com/isl-org/Open3D/releases/download/v0.16.0/open3d-devel-linux-x86_64-cxx11-abi-0.16.0.tar.xz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://github.com/isl-org/Open3D/releases/download/v0.16.0/open3d-devel-linux-x86_64-cxx11-abi-0.16.0.tar.xz"
+      }
+    },
+    "open3d-deb": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-11mTwhH5r4C2wkqsfvhvBgJOoiHdlVmGmKt2n0dbcaY=",
+        "type": "file",
+        "url": "https://github.com/isl-org/Open3D/releases/download/v0.16.0/open3d-app-0.16.0-Ubuntu.deb"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/isl-org/Open3D/releases/download/v0.16.0/open3d-app-0.16.0-Ubuntu.deb"
+      }
+    },
+    "root": {
+      "inputs": {
+        "filament-archive": "filament-archive",
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs",
+        "open3d-archive": "open3d-archive",
+        "open3d-deb": "open3d-deb"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
