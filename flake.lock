@@ -1,17 +1,5 @@
 {
   "nodes": {
-    "filament-archive": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-zz6JY2U66o3esnDHYpInUGcGzT4PDt8rAsN/6j7Tels=",
-        "type": "tarball",
-        "url": "https://github.com/google/filament/releases/download/v1.31.6/filament-v1.31.6-linux.tgz"
-      },
-      "original": {
-        "type": "tarball",
-        "url": "https://github.com/google/filament/releases/download/v1.31.6/filament-v1.31.6-linux.tgz"
-      }
-    },
     "flake-utils": {
       "locked": {
         "lastModified": 1676283394,
@@ -29,51 +17,113 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1669833724,
-        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
+        "lastModified": 1754498491,
+        "narHash": "sha256-erbiH2agUTD0Z30xcVSFcDHzkRvkRXOQ3lb887bcVrs=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "rev": "c2ae88e026f9525daf89587f3cbee584b92b6134",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "22.11",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
     },
-    "open3d-archive": {
-      "flake": false,
+    "pyproject-build-systems": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "pyproject-nix": [
+          "pyproject-nix"
+        ],
+        "uv2nix": [
+          "uv2nix"
+        ]
+      },
       "locked": {
-        "narHash": "sha256-y41RToomgzuqIRno7kpj1BAoD//0gGThUCPkCCJa4LQ=",
-        "type": "tarball",
-        "url": "https://github.com/isl-org/Open3D/releases/download/v0.16.0/open3d-devel-linux-x86_64-cxx11-abi-0.16.0.tar.xz"
+        "lastModified": 1753063383,
+        "narHash": "sha256-H+gLv6424OjJSD+l1OU1ejxkN/v0U+yaoQdh2huCXYI=",
+        "owner": "pyproject-nix",
+        "repo": "build-system-pkgs",
+        "rev": "45888b7fd4bf36c57acc55f07917bdf49ec89ec9",
+        "type": "github"
       },
       "original": {
-        "type": "tarball",
-        "url": "https://github.com/isl-org/Open3D/releases/download/v0.16.0/open3d-devel-linux-x86_64-cxx11-abi-0.16.0.tar.xz"
+        "owner": "pyproject-nix",
+        "repo": "build-system-pkgs",
+        "type": "github"
       }
     },
-    "open3d-deb": {
-      "flake": false,
+    "pyproject-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
       "locked": {
-        "narHash": "sha256-11mTwhH5r4C2wkqsfvhvBgJOoiHdlVmGmKt2n0dbcaY=",
-        "type": "file",
-        "url": "https://github.com/isl-org/Open3D/releases/download/v0.16.0/open3d-app-0.16.0-Ubuntu.deb"
+        "lastModified": 1754287816,
+        "narHash": "sha256-kDt0HB89oWTlTQMnTwDxx3BlRHK1AdAJ1kMcVYGuccs=",
+        "owner": "pyproject-nix",
+        "repo": "pyproject.nix",
+        "rev": "efe944d0902f406c28b4e8662312292a37e4de87",
+        "type": "github"
       },
       "original": {
-        "type": "file",
-        "url": "https://github.com/isl-org/Open3D/releases/download/v0.16.0/open3d-app-0.16.0-Ubuntu.deb"
+        "owner": "pyproject-nix",
+        "repo": "pyproject.nix",
+        "type": "github"
       }
     },
     "root": {
       "inputs": {
-        "filament-archive": "filament-archive",
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs",
-        "open3d-archive": "open3d-archive",
-        "open3d-deb": "open3d-deb"
+        "pyproject-build-systems": "pyproject-build-systems",
+        "pyproject-nix": "pyproject-nix",
+        "serena-src": "serena-src",
+        "uv2nix": "uv2nix"
+      }
+    },
+    "serena-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1754754752,
+        "narHash": "sha256-UP1ykzCVwAL8Nvn+mlKxLYoxNz+3UKXDVGAn/1U3Vpo=",
+        "owner": "oraios",
+        "repo": "serena",
+        "rev": "0f467a64da30990b4a66b7f9327511cc2b6deed1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oraios",
+        "repo": "serena",
+        "type": "github"
+      }
+    },
+    "uv2nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "pyproject-nix": [
+          "pyproject-nix"
+        ]
+      },
+      "locked": {
+        "lastModified": 1754719699,
+        "narHash": "sha256-Ek6WILkhVMDWm9j0L23gxHhDt62z1+A68D+pPt0ghao=",
+        "owner": "pyproject-nix",
+        "repo": "uv2nix",
+        "rev": "38ead6a16ba1be029dd40fe17fc064d6934847d2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pyproject-nix",
+        "repo": "uv2nix",
+        "type": "github"
       }
     }
   },
