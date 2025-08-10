@@ -35,20 +35,22 @@
       flake-utils,
       ...
     }@inputs:
-    flake-utils.lib.eachDefaultSystem (
+    (flake-utils.lib.eachDefaultSystem (
       system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
       in
       {
-        overlays.default = [
-          (final: prev: {
-            serena = final.callPackage ./serena { inherit system; };
-          })
-        ];
         packages = {
           serena = pkgs.callPackage ./serena { inherit inputs; };
         };
       }
-    );
+    ))
+    // {
+      overlays.default = (
+        final: prev: {
+          serena = final.callPackage ./serena { inherit inputs; };
+        }
+      );
+    };
 }
