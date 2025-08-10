@@ -41,6 +41,11 @@
         pkgs = nixpkgs.legacyPackages.${system};
       in
       {
+        overlays.default = [
+          (final: prev: {
+            serena = final.callPackage ./serena { inherit system; };
+          })
+        ];
         packages = {
           serena = pkgs.callPackage ./serena { inherit inputs; };
         };
